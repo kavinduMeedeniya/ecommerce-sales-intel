@@ -12,7 +12,10 @@ app = FastAPI(title="E-commerce Sales API")
 # CORS for React
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=[
+        "https://ecommerce-sales-prediction.onrender.com",  # Your frontend URL
+        "http://localhost:3000"  # Keep for local dev
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
